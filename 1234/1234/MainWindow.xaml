@@ -1,0 +1,28 @@
+﻿<Window x:Class="_1234.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1234"
+        mc:Ignorable="d"
+        Title="MainWindow" Background="#24303C" Height="410" Width="550">
+    <Grid>
+        <StackPanel>
+            <Button x:Name="ExitButton" Height="25" Width="75" Content="Закрыть" HorizontalAlignment="Right" FontSize="14" Style="{StaticResource hg}" Click="ExitButton_Click" />
+            <Label Content="Регистрация" Margin="35,30,0,0" FontFamily="./#Caveat" FontSize="25" Width="200" Foreground="White" FontWeight="Light" FontStretch="ExtraCondensed"/>
+
+            <Label Name="Login" Content="Логин" Foreground="White" Width="200"/>
+            <TextBox Name="LoginText"  Height="25" Width="200" MaxLength="25" FontSize="14" Foreground="White" Background="Transparent" BorderBrush="#19B188" BorderThickness="2"/>
+
+            <Label Name="Pass" Content="Пароль" Foreground="White" Width="200"/>
+            <PasswordBox Name="PassText" PasswordChar="♥" Foreground="White" Background="Transparent" BorderBrush="#19B188" BorderThickness="2" Height="25" Width="200" MaxLength="14" FontSize="14"/>
+
+            <Label Name="LabelCmb" Content="Уровень доступа" Foreground="White" Width="200"/>
+            <ComboBox Name="Cmb" Width="200" BorderBrush="#19B188" FontWeight="Bold" Height="25" Background="Transparent" IsEditable="True"/>
+
+            <Button x:Name="RegButton" Style="{StaticResource hg}" Height="25" Width="130" Content="Регистрация" Margin="10,20,10,10" FontSize="14" Click="RegButton_Click" />
+            <Button Name="AlreadyAcc" Content="Уже есть аккаунт? Войти" Style="{StaticResource minihg}" Height="25" Width="200" Click="AlreadyAcc_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

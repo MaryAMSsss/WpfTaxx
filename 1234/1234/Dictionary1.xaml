@@ -1,0 +1,61 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="hg" TargetType="Button">
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="BorderBrush" Value="#19B188"></Setter>
+        <Setter Property="Background" Value="#19B188"/>
+        <Setter Property="FontWeight" Value="Medium"></Setter>
+        <Setter Property="FontStyle" Value="Normal"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="borderButton" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Transparent"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="BorderBrush" Value="#19B188"></Setter>
+                <Setter Property="BorderThickness" Value="1.5"></Setter>
+                <Setter Property="FontWeight" Value="Medium"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="minihg" TargetType="Button">
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontWeight" Value="Light"></Setter>
+        <Setter Property="FontStyle" Value="Normal"></Setter>
+        <Setter Property="BorderThickness" Value="0"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="borderButton" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Transparent"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="hgd" TargetType="Button" BasedOn="{StaticResource hg}">
+        <Setter Property="FontSize" Value="15"></Setter>
+    </Style>
+
+    <Style x:Key="hgx" TargetType="Button" BasedOn="{StaticResource hg}">
+        <Setter Property="FontWeight" Value="ExtraBold"></Setter>
+    </Style>
+
+</ResourceDictionary>

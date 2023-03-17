@@ -1,0 +1,66 @@
+﻿<Window x:Class="_1234.WaiterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1234"
+        mc:Ignorable="d"
+        Title="WaiterWindow" Height="570" Width="800" Background="#24303C">
+    <Grid>
+        <StackPanel >
+            <Menu Height="40" VerticalAlignment="Top" >
+                <MenuItem Header="База данных" Height="30" FontSize="18" Margin="7,2,2,2" Foreground="#252E55" FontWeight="DemiBold">
+                </MenuItem>
+                <Label Content="Личный кабинет официанта"/>
+
+                <Button x:Name="SortBtn" Content="↑" Style="{StaticResource hgx}" Width="50" Height="28" Click="SortBtn_Click"/>
+                <Button x:Name="exitbtn" Content="Выйти" Style="{StaticResource hgd}" Width="70" Height="25" Margin="310,5,0,0" Click="exitbtn_Click"/>
+            </Menu>
+            <TabControl x:Name="Tables">
+                <TabItem x:Name="MenuTab" HorizontalAlignment="Right" Margin="0,-2,-2,0" Width="88">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="3">Меню</TextBlock>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <TabItem.Content>
+                        <StackPanel>
+                            <DataGrid x:Name="menu"></DataGrid>
+                        </StackPanel>
+                    </TabItem.Content>
+                </TabItem>
+                <TabItem x:Name="OrderTab">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock><Run Text="Заказы"/></TextBlock>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <TabItem.Content>
+                        <StackPanel>
+                            <DataGrid x:Name="orders"></DataGrid>
+                        </StackPanel>
+                    </TabItem.Content>
+                </TabItem>
+                <TabItem x:Name="DishesInOrderTab">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock><Run Text="Блюда в заказе"/></TextBlock>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <TabItem.Content>
+                        <StackPanel>
+                            <DataGrid x:Name="dishes"></DataGrid>
+                        </StackPanel>
+                    </TabItem.Content>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+        
+        <Button x:Name="DeleteButton" Content="Удалить" HorizontalAlignment="Right" Style="{StaticResource hgd}" Click="DeleteButton_Click" Margin="0,456,224,50" Width="76" />
+        <Button x:Name="EditButton" Content="Редактировать" HorizontalAlignment="Center" Style="{StaticResource hgd}" Click="EditButton_Click" Margin="0,456,0,50" Width="148" />
+        <Button x:Name="AddButton" Content="Добавить" HorizontalAlignment="Left" Style="{StaticResource hgd}" Click="AddButton_Click" Margin="194,456,0,50" RenderTransformOrigin="0.723,-0.512" Width="106" />
+        <Button x:Name="next" Style="{StaticResource hg}" Content="→" FontSize="20" FontWeight="ExtraBold" Margin="659,456,88,50" Click="next_Click"/>
+        <Button x:Name="prev" Style="{StaticResource hg}" Content="←" FontSize="20" FontWeight="ExtraBold" Margin="600,456,151,50" Click="prev_Click"/>
+
+    </Grid>
+</Window>

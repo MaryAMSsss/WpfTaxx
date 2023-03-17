@@ -1,0 +1,20 @@
+﻿<Window x:Class="_1234.AEProducts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1234.Models"
+        mc:Ignorable="d"
+        Title="AEProducts" Background="#24303C" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Button x:Name="exit" Style="{StaticResource hg}" Content="Назад" Width="70" Height="30" HorizontalAlignment="Right" Margin="0,26,18,0" VerticalAlignment="Top" Click="exit_Click"/>
+        <TextBox x:Name="naim" Width="220" Height="43" Foreground="White" Background="Transparent" BorderBrush="#19B188" BorderThickness="2" Margin="430,37,150,349"/>
+        <TextBox x:Name="price" Width="220" Height="43" Foreground="White" Background="Transparent" BorderBrush="#19B188" BorderThickness="2" Margin="432,147,148,237"/>
+        <TextBox x:Name="ves" Width="220" Height="43" Foreground="White" Background="Transparent" BorderBrush="#19B188" BorderThickness="2" Margin="436,235,144,151"/>
+        <Label Content="Наименование:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="20" Margin="112,37,0,0" />
+        <Label Content="Стоимость:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="20" Margin="148,147,0,0"  />
+        <Label Content="Мера веса:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="20" Margin="145,235,0,0" />
+        <Button x:Name="EditButton" Content="Редактировать" Style="{StaticResource hg}" FontSize="15" Width="150" Height="69" HorizontalAlignment="Right"  Margin="0,329,462,0" VerticalAlignment="Top" Click="EditButton_Click"/>
+        <Button x:Name="AddButton" Content="Добавить" Style="{StaticResource hg}" FontSize="15" Width="150" Height="69" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,214,36" Click="AddButton_Click" />
+    </Grid>
+</Window>
